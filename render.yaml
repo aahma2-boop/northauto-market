@@ -1,19 +1,12 @@
 services:
   - type: web
-    name: northauto-backend
+    name: northauto-market
     env: node
     plan: free
-    rootDir: backend
+    nodeVersion: 24
     buildCommand: npm install
     startCommand: npm start
     autoDeploy: true
     envVars:
       - key: NODE_ENV
         value: production
-
-  - type: static
-    name: northauto-frontend
-    rootDir: frontend
-    buildCommand: npm install && npm run build
-    publishDir: dist
-    autoDeploy: true
