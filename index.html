@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NorthAuto Market — Canadian &amp; US Auto Parts</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="header">
+    <div class="logo" id="logoHome">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/></svg>
+      <div>
+        <div>NorthAuto Market</div>
+        <div class="logo-sub">Canada · USA · North America-wide</div>
+      </div>
+    </div>
+    <div class="header-actions" id="headerActions"></div>
+  </header>
+
+  <div class="hero-strip">
+    <div>
+      <div class="hero-title">Auto parts across North America</div>
+      <div class="hero-desc">Buy and sell parts between Canada and the USA. Sellers list in their own currency — buyers see everything converted. Cross-border duty status shown on every listing.</div>
+    </div>
+    <div class="hero-stats">
+      <div><b id="statListings">0</b><br>active listings</div>
+      <div><b id="statSellers">0</b><br>sellers</div>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <div class="search-box">
+      <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+      <input type="text" id="searchInput" placeholder="Search parts, fitment, seller, or city...">
+    </div>
+    <select class="sort-select" id="sortSelect">
+      <option value="newest">Newest first</option>
+      <option value="price-low">Price: Low to High</option>
+      <option value="price-high">Price: High to Low</option>
+      <option value="name">Name: A-Z</option>
+    </select>
+  </div>
+
+  <div class="main-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Category</div>
+        <ul class="category-list" id="categoryList"></ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Condition</div>
+        <div id="conditionFilters"></div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Seller location</div>
+        <div id="countryFilters"></div>
+      </div>
+    </aside>
+    <main class="content">
+      <div id="payoutBanner"></div>
+      <div class="toolbar"><div class="results-count" id="resultsCount"></div></div>
+      <div class="product-grid" id="productGrid"></div>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay"><div class="modal" id="modal"></div></div>
+  <div class="toast" id="toast"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
