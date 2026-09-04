@@ -1,3 +1,4 @@
+"engines": { "node": "24.x" }
 {
   "name": "northauto-market",
   "version": "1.0.0",
