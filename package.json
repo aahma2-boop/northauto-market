@@ -1,3 +1,6 @@
+"scripts": {
+  "start": "node server.js"
+}
 {
   "name": "northauto-market",
   "version": "1.0.0",
